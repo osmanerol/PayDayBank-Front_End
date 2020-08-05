@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose&display=swap');
+
+html, body {
+    position: relative;
+    min-height: 100vh;
+}
+  
+#root {
+    height: 100%;
+    position: relative;
+    min-height: 100vh;
+}
+
+#container{
+    padding-bottom: 60px;
+}
+
+.navbar{
+    background-color: #1b262c;
+    padding:1em;
+    font-family: 'Red Rose', cursive;
+}
+
+.navbar .navbar-brand{
+    color:#fff;
+    font-size: 1.5em;
+}
+
+#errorContainer{
+    margin-top:5em;  
+    font-family: 'Red Rose', cursive;
+}
+
+#errorText{
+    font-size: 2em;
+}
+
+.page-footer{
+    background-color: #1b262c;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+    padding:0.6em;
+    z-index: 1;
+}
+
+.page-footer .text-light{
+    margin:0;
+    font-family: 'Red Rose', cursive;
+}
+
+.login-title{
+    font-family: 'Red Rose', cursive;
+    font-size:1.5em;
+}
+
+#errorTitle{
+    color:red;
+}
+
+.left-bar{
+    padding:1em 1em 0.5em 1em;
+}
+
+.left-bar-button{
+    padding:0.5em;
+    font-family: 'Mulish', sans-serif;
+}
+
+.subContainer{
+    margin:0.5em auto;
+}
+
+.fa-check{
+    color:green;
+}
+
+.fa-times{
+    color:red;
+}
+
+.editInput{
+    margin:1em 0;
+}
+
+.editForm{
+    padding-top: 1em;
+}
+
+.editForm .col-12{
+    padding:0;
+}
+
+/*
+@media(max-width:768px){
+    .page-footer{
+        background-color: #1b262c;
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        padding:0.6em;
+    }
+}
+*/

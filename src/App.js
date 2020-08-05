@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+//  pages
+import LoginPage from './components/pages/LoginPage';
+import NotFoundPage from './components/pages/NotFoundPage';
+import ProductsPage from './components/pages/ProductsPage';
+import ProfilePage from './components/pages/ProfilePage';
+import ProductEditPage from './components/pages/ProductEditPage';
+
+//  private route
+import PrivateRoute from './components/PrivateRoute';
+
+class App extends Component {
+  render() {
+    return (
+      <div>
+          <Switch>
+            <Route path='/' exact strict component={LoginPage} />
+            <PrivateRoute path='/products' exact strict component={ProductsPage} />
+            <PrivateRoute path='/profile' exact strict component={ProfilePage} />
+            <PrivateRoute path='/products/:id' exact strict component={ProductEditPage} />
+            <Route exact strict component={NotFoundPage} />
+          </Switch> 
+      </div>
+    );
+  }
 }
 
 export default App;
